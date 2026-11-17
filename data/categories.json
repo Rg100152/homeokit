@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Pain Relief",
+    "slug": "pain-relief",
+    "icon": "🩹",
+    "description": "Natural support for aches, sprains and joint discomfort."
+  },
+  {
+    "id": 2,
+    "name": "Skin Care",
+    "slug": "skin-care",
+    "icon": "🌿",
+    "description": "Gentle remedies for clear, calm and healthy-looking skin."
+  },
+  {
+    "id": 3,
+    "name": "Hair Care",
+    "slug": "hair-care",
+    "icon": "💆",
+    "description": "Nourish your scalp and support strong, healthy hair."
+  },
+  {
+    "id": 4,
+    "name": "Oral Care",
+    "slug": "oral-care",
+    "icon": "🦷",
+    "description": "Comfort for gums, teeth and mouth ulcers."
+  },
+  {
+    "id": 5,
+    "name": "Digestive Care",
+    "slug": "digestive-care",
+    "icon": "🍃",
+    "description": "Support healthy digestion and everyday gut comfort."
+  },
+  {
+    "id": 6,
+    "name": "Mother Tinctures",
+    "slug": "mother-tinctures",
+    "icon": "🌱",
+    "description": "Plant-based liquid extracts for targeted wellness support."
+  },
+  {
+    "id": 7,
+    "name": "Bio-chemic",
+    "slug": "bio-chemic",
+    "icon": "💊",
+    "description": "Cell salts that support the body's natural balance."
+  },
+  {
+    "id": 8,
+    "name": "Ointments",
+    "slug": "ointments",
+    "icon": "🧴",
+    "description": "Soothing topical care for skin, cuts and sore areas."
+  }
+]

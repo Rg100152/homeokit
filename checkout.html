@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Secure demo checkout for your homoeopathy order.">
+  <title>Checkout — Homeokit Homoeopathy</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="checkout">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero" style="padding-bottom:26px">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span class="sep">›</span>
+          <a href="cart.html">Cart</a><span class="sep">›</span><span class="current">Checkout</span>
+        </nav>
+        <h1>Checkout</h1>
+        <p>Please enter your delivery details to place the order.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:20px">
+      <div class="container checkout-layout">
+        <div>
+          <div class="alert alert-info">
+            <strong>Demo checkout:</strong> no real payment is collected. Orders are saved in this browser only.
+          </div>
+
+          <form id="checkout-form" class="form-card" novalidate>
+            <h2 style="font-size:1.15rem;margin-bottom:18px">Shipping Address</h2>
+            <div class="form-grid">
+              <div class="form-group"><label for="co-name">Full name <span class="req">*</span></label>
+                <input id="co-name" name="name" autocomplete="name" required placeholder="e.g. Anjali Verma"></div>
+              <div class="form-group"><label for="co-phone">Phone number <span class="req">*</span></label>
+                <input id="co-phone" name="phone" type="tel" inputmode="numeric" pattern="[0-9+\-\s]{10,15}" autocomplete="tel" required placeholder="10-digit mobile number"></div>
+              <div class="form-group full"><label for="co-email">Email address <span class="req">*</span></label>
+                <input id="co-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+              <div class="form-group full"><label for="co-address">Street address <span class="req">*</span></label>
+                <textarea id="co-address" name="address" autocomplete="street-address" required placeholder="House no., street, landmark"></textarea></div>
+              <div class="form-group"><label for="co-city">City <span class="req">*</span></label>
+                <input id="co-city" name="city" autocomplete="address-level2" required placeholder="City"></div>
+              <div class="form-group"><label for="co-state">State <span class="req">*</span></label>
+                <input id="co-state" name="state" autocomplete="address-level1" required placeholder="State"></div>
+              <div class="form-group"><label for="co-pin">PIN code <span class="req">*</span></label>
+                <input id="co-pin" name="pincode" inputmode="numeric" pattern="[0-9]{6}" autocomplete="postal-code" required placeholder="6-digit PIN"></div>
+              <div class="form-group"><label for="co-notes">Order notes <span class="muted small">(optional)</span></label>
+                <input id="co-notes" name="notes" placeholder="Delivery instructions"></div>
+            </div>
+
+            <h2 style="font-size:1.15rem;margin:28px 0 14px">Payment Method</h2>
+            <div class="payment-options">
+              <label class="payment-option">
+                <input type="radio" name="payment" value="Cash on Delivery" checked>
+                <span><strong>Cash on Delivery (COD)</strong><small>Pay when your order arrives.</small></span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" value="Online Payment (Demo)">
+                <span><strong>Online Payment</strong><small>Demo placeholder — Razorpay / PayU can be connected later.</small></span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" value="UPI (Demo)">
+                <span><strong>UPI</strong><small>Demo placeholder — no real transfer will occur.</small></span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="place-order" style="margin-top:22px">Place Order</button>
+            <p class="small muted text-center" style="margin:12px 0 0">By placing an order you agree to our <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+          </form>
+        </div>
+
+        <aside class="summary-card" id="checkout-summary"></aside>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/cart.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

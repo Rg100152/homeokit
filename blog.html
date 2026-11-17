@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Read homoeopathy guides, remedy explainers and everyday wellness tips from Homeokit Homoeopathy.">
+  <title>Blog — Homeokit Homoeopathy</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="blog">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span class="sep">›</span><span class="current">Blog</span>
+        </nav>
+        <h1>Health Tips &amp; Guides</h1>
+        <p>Practical articles to help you understand homoeopathy and make confident wellness choices.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:26px">
+      <div class="container">
+        <div class="chip-bar" id="blog-chips" aria-label="Blog categories"></div>
+        <form class="header-search" id="blog-search" role="search" style="max-width:480px;margin:0 0 26px">
+          <span aria-hidden="true">🔎</span>
+          <input type="search" id="blog-search-input" placeholder="Search articles..." aria-label="Search articles">
+          <button type="submit" class="btn btn-primary btn-sm">Search</button>
+        </form>
+        <div class="blog-grid" id="blog-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/cart.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/blog.js"></script>
+</body>
+</html>

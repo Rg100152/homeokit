@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a homoeopathy consultation and get personalised guidance from experienced practitioners.">
+  <title>Doctor's Corner — Homeokit Homoeopathy</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="consult">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span class="sep">›</span><span class="current">Doctor's Corner</span>
+        </nav>
+        <h1>Doctor's Corner</h1>
+        <p>Personalised guidance from qualified homoeopathic practitioners — because the right remedy is about you, not just your symptoms.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:26px">
+      <div class="container">
+        <div class="value-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:34px">
+          <div class="value-card"><div class="icon">📝</div><h3>1. Share your concern</h3><p>Tell us about your symptoms, health history and lifestyle in a few simple steps.</p></div>
+          <div class="value-card"><div class="icon">👩‍⚕️</div><h3>2. Expert review</h3><p>Our practitioner studies your case and suggests a suitable remedy and potency.</p></div>
+          <div class="value-card"><div class="icon">🌿</div><h3>3. Follow your plan</h3><p>Get clear usage guidance and follow up as needed. Care that fits your routine.</p></div>
+        </div>
+
+        <div class="cart-layout">
+          <form class="form-card" data-form="consultation" novalidate>
+            <h2 style="font-size:1.15rem;margin-bottom:6px">Book a Consultation</h2>
+            <p class="muted small" style="margin-bottom:18px">This is a demo booking form. Requests are saved in this browser only.</p>
+            <div class="form-grid">
+              <div class="form-group"><label for="dc-name">Full name <span class="req">*</span></label>
+                <input id="dc-name" name="name" required placeholder="Full name"></div>
+              <div class="form-group"><label for="dc-phone">Phone number <span class="req">*</span></label>
+                <input id="dc-phone" name="phone" type="tel" required placeholder="Mobile number"></div>
+              <div class="form-group full"><label for="dc-email">Email address <span class="req">*</span></label>
+                <input id="dc-email" name="email" type="email" required placeholder="you@example.com"></div>
+              <div class="form-group"><label for="dc-age">Age <span class="req">*</span></label>
+                <input id="dc-age" name="age" type="number" min="0" max="120" required placeholder="Age in years"></div>
+              <div class="form-group"><label for="dc-concern">Primary concern <span class="req">*</span></label>
+                <select id="dc-concern" name="concern" required>
+                  <option value="">Select a concern</option>
+                  <option>Skin &amp; allergies</option>
+                  <option>Pain &amp; joints</option>
+                  <option>Digestive health</option>
+                  <option>Hair &amp; scalp</option>
+                  <option>Sleep &amp; stress</option>
+                  <option>Women's health</option>
+                  <option>Other</option>
+                </select></div>
+              <div class="form-group full"><label for="dc-message">Describe your concern <span class="req">*</span></label>
+                <textarea id="dc-message" name="message" required placeholder="Since when have you had this concern? Any existing conditions or medicines?"></textarea></div>
+            </div>
+            <label class="checkbox-row" style="margin-top:14px">
+              <input type="checkbox" required>
+              <span>I understand this is an informational demo service and not a substitute for emergency medical care.</span>
+            </label>
+            <button type="submit" class="btn btn-primary" style="margin-top:18px">Request Consultation</button>
+            <div class="form-message" data-form-message></div>
+          </form>
+
+          <div>
+            <div class="form-card">
+              <h2 style="font-size:1.15rem;margin-bottom:12px">Why consult a practitioner?</h2>
+              <ul class="detail-perks" style="font-size:0.92rem">
+                <li><span class="tick">✔</span> Remedy selected for your complete health picture</li>
+                <li><span class="tick">✔</span> Correct potency and dosage guidance</li>
+                <li><span class="tick">✔</span> Safe options for children and elderly patients</li>
+                <li><span class="tick">✔</span> Guidance on diet and lifestyle alongside treatment</li>
+              </ul>
+            </div>
+            <div class="alert alert-info" style="margin-top:18px">
+              <strong>Important:</strong> For severe, sudden or worsening symptoms, please contact a hospital or your local doctor immediately.
+            </div>
+            <div class="cta-band" style="margin-top:18px">
+              <h3>Prefer to browse first?</h3>
+              <p>Explore our remedies by category and read the guides in our blog.</p>
+              <a href="shop.html" class="btn btn-accent">Shop Products</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/cart.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

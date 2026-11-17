@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thank you for your order with Homeokit Homoeopathy.">
+  <title>Order Placed — Homeokit Homoeopathy</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="order-success">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="section section-tint">
+      <div class="container" id="success-root">
+        <div class="form-card" style="max-width:720px;margin:0 auto" id="success-card">
+          <div class="text-center" style="font-size:3rem;color:var(--primary)">✅</div>
+          <h1 class="text-center">Thank you for your order!</h1>
+          <p class="text-center muted">Your order has been recorded in this demo. A confirmation would normally be sent by email and SMS.</p>
+          <div class="summary-card" style="position:static;box-shadow:none;margin-top:24px">
+            <div class="summary-row"><span>Order number</span><strong id="success-id">—</strong></div>
+            <div class="summary-row"><span>Placed on</span><span id="success-date">—</span></div>
+            <div class="summary-row"><span>Customer</span><span id="success-name">—</span></div>
+            <div class="summary-row"><span>Email</span><span id="success-email">—</span></div>
+            <div id="success-items" style="border-top:1px solid var(--border);margin-top:10px;padding-top:10px"></div>
+            <div class="summary-row total"><span>Order total</span><span id="success-total">—</span></div>
+          </div>
+          <p class="small muted text-center" style="margin-top:20px">Estimated delivery: 4–7 working days. Need help? <a href="contact.html">Contact us</a>.</p>
+          <div class="text-center" style="margin-top:18px">
+            <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+            <a href="index.html" class="btn btn-outline">Back to Home</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/cart.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Homeokit Homoeopathy for product questions, orders and support.">
+  <title>Contact Us — Homeokit Homoeopathy</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span class="sep">›</span><span class="current">Contact</span>
+        </nav>
+        <h1>Contact Us</h1>
+        <p>Questions about a product, an order or your health concern? We are here to help.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:26px">
+      <div class="container">
+        <div class="cart-layout">
+          <div>
+            <form class="form-card" data-form="contact" novalidate>
+              <h2 style="font-size:1.15rem;margin-bottom:18px">Send us a message</h2>
+              <div class="form-grid">
+                <div class="form-group"><label for="ct-name">Your name <span class="req">*</span></label>
+                  <input id="ct-name" name="name" required placeholder="Full name"></div>
+                <div class="form-group"><label for="ct-email">Email address <span class="req">*</span></label>
+                  <input id="ct-email" name="email" type="email" required placeholder="you@example.com"></div>
+                <div class="form-group"><label for="ct-phone">Phone number</label>
+                  <input id="ct-phone" name="phone" type="tel" placeholder="Mobile number"></div>
+                <div class="form-group"><label for="ct-subject">Subject <span class="req">*</span></label>
+                  <select id="ct-subject" name="subject" required>
+                    <option value="">Choose a topic</option>
+                    <option>Product enquiry</option>
+                    <option>Order / delivery support</option>
+                    <option>Feedback</option>
+                    <option>Other</option>
+                  </select></div>
+                <div class="form-group full"><label for="ct-message">Message <span class="req">*</span></label>
+                  <textarea id="ct-message" name="message" required placeholder="Tell us how we can help..."></textarea></div>
+              </div>
+              <button type="submit" class="btn btn-primary" style="margin-top:18px">Send Message</button>
+              <div class="form-message" data-form-message></div>
+              <p class="small muted" style="margin:12px 0 0">Demo form — messages are stored in this browser only.</p>
+            </form>
+          </div>
+
+          <div>
+            <div class="form-card" style="margin-bottom:18px">
+              <h2 style="font-size:1.15rem;margin-bottom:12px">Reach Us Directly</h2>
+              <ul class="info-list">
+                <li><span class="icon">📞</span><span><strong>Customer care</strong><br>+91-120-456-7890<br><span class="muted small">Mon–Sat, 9:00 AM – 6:00 PM</span></span></li>
+                <li><span class="icon">✉️</span><span><strong>Email</strong><br>info@homeokit.example<br>support@homeokit.example</span></li>
+                <li><span class="icon">📍</span><span><strong>Registered office</strong><br>Sahibabad Industrial Area, Ghaziabad,<br>Uttar Pradesh 201010, India</span></li>
+              </ul>
+            </div>
+            <div class="map-placeholder">
+              <div>
+                <div class="map-pin">📍</div>
+                <strong>Sahibabad, Ghaziabad, Uttar Pradesh</strong>
+                <p class="small muted" style="margin:4px 0 0">Map placeholder — replace with an embedded map later.</p>
+              </div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Sahibabad+Ghaziabad" target="_blank" rel="noopener">View on Google Maps ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/cart.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

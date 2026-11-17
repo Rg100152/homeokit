@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Product details, usage directions and reviews for homoeopathic medicines at Homeokit Homoeopathy.">
+  <title>Product Details — Homeokit Homoeopathy</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="product">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero" style="padding-bottom:22px">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span class="sep">›</span>
+          <a href="shop.html" id="crumb-category">Shop</a><span class="sep">›</span>
+          <span class="current" id="crumb-product">Product</span>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:16px">
+      <div class="container" id="product-root">
+        <div id="product-content">
+          <div class="detail-grid">
+            <!-- Gallery -->
+            <div>
+              <div class="gallery-main"><img id="detail-image" src="images/products/product-1.svg" alt="Product image"></div>
+              <div class="thumb-row" id="thumb-row"></div>
+            </div>
+
+            <!-- Info -->
+            <div>
+              <span class="eyebrow" id="detail-category">Category</span>
+              <h1 class="detail-title" id="detail-name">Product name</h1>
+              <div class="detail-rating" id="detail-rating"></div>
+              <div class="detail-price" id="detail-price"></div>
+
+              <div class="variant-row">
+                <div class="variant-field"><label for="detail-pack">Pack size</label><select id="detail-pack"></select></div>
+                <div class="variant-field"><label for="detail-potency">Potency</label><select id="detail-potency"></select></div>
+                <div class="variant-field">
+                  <label for="detail-qty">Quantity</label>
+                  <div class="qty-control">
+                    <button type="button" data-step="down" aria-label="Decrease quantity">−</button>
+                    <input type="text" id="detail-qty" value="1" readonly aria-label="Quantity">
+                    <button type="button" data-step="up" aria-label="Increase quantity">+</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="detail-actions">
+                <button type="button" class="btn btn-primary" data-detail-add>Add to Cart</button>
+                <button type="button" class="btn btn-accent" data-detail-add data-buy-now>Buy Now</button>
+              </div>
+
+              <ul class="detail-perks">
+                <li id="stock-note">✔ In Stock</li>
+                <li><span class="tick">✔</span> Free shipping on orders above ₹499</li>
+                <li><span class="tick">✔</span> GMP certified · 100% authentic</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tabs -->
+          <div style="margin-top:48px">
+            <div class="tabs" role="tablist">
+              <button type="button" class="tab-btn active" data-tab="description" role="tab">Description</button>
+              <button type="button" class="tab-btn" data-tab="directions" role="tab">Directions &amp; Safety</button>
+              <button type="button" class="tab-btn" data-tab="reviews" role="tab">Reviews</button>
+            </div>
+            <div class="tab-panel active" id="tab-description" role="tabpanel"></div>
+            <div class="tab-panel" id="tab-directions" role="tabpanel"></div>
+            <div class="tab-panel" id="tab-reviews" role="tabpanel"></div>
+          </div>
+
+          <!-- Related -->
+          <div style="margin-top:50px">
+            <div class="section-head"><h2 class="section-title">Related Products</h2></div>
+            <div class="product-grid" id="related-grid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="sticky-mobile-bar">
+      <span class="price" id="mobile-price">₹0</span>
+      <button type="button" class="btn btn-primary" data-detail-add>Add to Cart</button>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/cart.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>

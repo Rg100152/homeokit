@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Swapnil K.",
+    "location": "Pune, Maharashtra",
+    "rating": 5,
+    "text": "I was looking for a gentle, trusted option for my family's everyday health needs. The products arrived quickly, the packing was neat, and the team answered all my questions patiently. Truly a trustworthy brand."
+  },
+  {
+    "id": 2,
+    "name": "Priya Sharma",
+    "location": "Jaipur, Rajasthan",
+    "rating": 5,
+    "text": "The Calendula Ointment has become a permanent part of our first-aid kit. It works wonderfully for minor cuts and dry patches, and the fact that it is natural gives me peace of mind."
+  },
+  {
+    "id": 3,
+    "name": "Dr. Ramesh Iyer",
+    "location": "Bengaluru, Karnataka",
+    "rating": 5,
+    "text": "As a practitioner, I appreciate consistent quality and clear potency labelling. The range here is well curated and the website makes it easy for patients to find what they need."
+  },
+  {
+    "id": 4,
+    "name": "Anjali Verma",
+    "location": "Lucknow, Uttar Pradesh",
+    "rating": 4,
+    "text": "Great experience overall. I ordered Nux Vomica and Kali Phos — both were delivered in good condition with proper expiry details. The checkout was simple and the prices are fair."
+  },
+  {
+    "id": 5,
+    "name": "Mohammed Faiz",
+    "location": "Kozhikode, Kerala",
+    "rating": 5,
+    "text": "Customer support helped me choose the right remedy for my skin concern. Delivery took just a few days and the product packaging was excellent. Would definitely order again."
+  }
+]

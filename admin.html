@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demo admin panel for managing products and viewing orders.">
+  <title>Admin Panel — Homeokit Homoeopathy</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body data-page="admin" class="admin-body">
+  <div class="admin-shell">
+    <aside class="admin-side">
+      <div class="admin-brand">🌿 Your<span>Brand</span> Admin</div>
+      <nav class="admin-nav" aria-label="Admin sections">
+        <button type="button" class="active" data-tab="dashboard">📊 Dashboard</button>
+        <button type="button" data-tab="products">📦 Products</button>
+        <button type="button" data-tab="orders">🧾 Orders</button>
+        <button type="button" data-tab="messages">✉️ Messages</button>
+      </nav>
+      <p class="admin-side-note">Demo panel — changes are saved to this browser's localStorage.</p>
+      <p class="admin-side-note"><a href="index.html" style="color:#8fd0a0">← Back to website</a></p>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <div><h1>Admin Dashboard</h1><span class="muted">Manage your demo storefront</span></div>
+        <span class="admin-demo-badge">DEMO · LOCAL STORAGE</span>
+      </div>
+
+      <!-- Dashboard -->
+      <section class="admin-tab" id="admin-dashboard">
+        <div class="admin-stat-grid" id="admin-stats"></div>
+        <div class="admin-card">
+          <h2 style="font-size:1.1rem;margin-bottom:10px">Quick actions</h2>
+          <div class="admin-toolbar">
+            <button type="button" class="btn btn-primary" data-tab-jump="products">Add / edit products</button>
+            <a href="shop.html" class="btn btn-outline">View storefront</a>
+            <button type="button" class="btn btn-ghost" id="product-reset">Restore demo catalogue</button>
+          </div>
+          <p class="small muted" style="margin:8px 0 0">Tip: product edits here override <code>data/products.json</code> for this browser. Use “Restore demo catalogue” to undo all edits.</p>
+        </div>
+      </section>
+
+      <!-- Products -->
+      <section class="admin-tab" id="admin-products" hidden>
+        <div class="admin-card">
+          <div class="admin-card-head"><h2>Products</h2><button type="button" class="btn btn-primary btn-sm" id="new-product">+ Add New</button></div>
+          <div class="admin-toolbar"><input type="search" id="admin-product-search" placeholder="Search products by name or category..."></div>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>Image</th><th>Product</th><th>Category</th><th>Price</th><th>Stock</th><th>Status</th><th>Actions</th></tr></thead>
+              <tbody id="admin-products-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="admin-card" id="product-form-card">
+          <div class="admin-card-head"><h2 id="product-form-title">Add a new product</h2></div>
+          <form id="product-form" novalidate>
+            <input type="hidden" id="product-id" name="id">
+            <div class="admin-form-grid">
+              <div class="form-group"><label>Name *</label><input name="name" required placeholder="Product name"></div>
+              <div class="form-group"><label>Slug *</label><input name="slug" required placeholder="product-slug"></div>
+              <div class="form-group"><label>Category *</label><select name="category" required><option value="">Select category</option></select></div>
+              <div class="form-group"><label>Image filename *</label><input name="image" required placeholder="product-21.svg"></div>
+              <div class="form-group"><label>Price (₹) *</label><input name="price" type="number" min="0" step="1" required></div>
+              <div class="form-group"><label>Old price (₹)</label><input name="old_price" type="number" min="0" step="1"></div>
+              <div class="form-group"><label>Pack size *</label><input name="pack_size" required placeholder="30ml"></div>
+              <div class="form-group"><label>Potency *</label><input name="potency" required placeholder="30C"></div>
+              <div class="form-group"><label>Stock *</label><input name="stock" type="number" min="0" required></div>
+              <div class="form-group"><label>Rating</label><input name="rating" type="number" min="0" max="5" step="0.1"></div>
+              <div class="form-group"><label>Review count</label><input name="review_count" type="number" min="0"></div>
+              <div class="form-group"><label>Expiry</label><input name="expiry" placeholder="60 months from manufacture"></div>
+              <div class="form-group"><label>Created at (YYYY-MM-DD)</label><input name="created_at" placeholder="2026-01-01"></div>
+              <div class="form-group full"><label>Ailments (comma separated)</label><input name="ailments" placeholder="cough, cold, fever"></div>
+              <div class="form-group full"><label>Description *</label><textarea name="description" required></textarea></div>
+              <div class="form-group full"><label>Directions for use *</label><textarea name="directions" required></textarea></div>
+              <div class="form-group full"><label class="checkbox-row"><input type="checkbox" name="is_featured"><span>Show as featured on the homepage</span></label></div>
+            </div>
+            <div class="admin-form-actions"><button type="submit" class="btn btn-primary">Save Product</button><button type="button" class="btn btn-ghost" id="clear-product-form">Clear Form</button></div>
+            <div class="form-message" id="product-form-message"></div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Orders -->
+      <section class="admin-tab" id="admin-orders" hidden>
+        <div class="admin-card">
+          <div class="admin-card-head"><h2>Demo Orders</h2></div>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>Order ID</th><th>Customer</th><th>Items</th><th>Total</th><th>Status</th><th>Date</th></tr></thead>
+              <tbody id="admin-orders-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Messages -->
+      <section class="admin-tab" id="admin-messages" hidden>
+        <div class="admin-card">
+          <div class="admin-card-head"><h2>Messages &amp; Consultation Requests</h2></div>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>Type</th><th>Name</th><th>Contact</th><th>Message</th><th>Date</th></tr></thead>
+              <tbody id="admin-messages-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/cart.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
